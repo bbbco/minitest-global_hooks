@@ -28,11 +28,11 @@ require 'minitest-global_hooks'
 Then, in your test helper, override the methods as needed:
 
 ````
-def global_setup
+def Minitest.global_setup
   ## Code to run before start of all tests
 end
 
-def global_teardown
+def Minitest.global_teardown
   ## Code to run after all tests have completed
 end
 ````

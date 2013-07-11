@@ -1,29 +1,21 @@
 module Minitest
 
-  class GlobalHooks < AbstractReporter
+  def self.plugin_global_hooks_init options
+    self.reporter << GlobalHooks.new
+  end
 
-    VERSION = "0.1"
-
+  class GlobalHooks < Reporter
     def start
-      puts "In Global Hooks setup"
-      global_setup
+      Minitest.global_setup
       super
     end
 
     def report
-      puts "In Global Hooks teardown"
-      global_teardown
+      Minitest.global_teardown
       super
     end
 
   end
 
-  def self.plugin_global_hooks_init options
-    Test::LifecycleHooks.module_eval do
-      def global_setup; end
-      def global_teardown; end
-    end
-    self.reporter << GlobalHooks.new
-  end
 
 end

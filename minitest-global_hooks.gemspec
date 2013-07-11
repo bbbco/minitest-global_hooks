@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'minitest/global_hooks_plugin.rb'
+require 'minitest/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "minitest-global_hooks"
-  spec.version       = Minitest::GlobalHooks::VERSION
+  spec.version       = VERSION
   spec.authors       = ["Brian Goad"]
   spec.email         = ["bgoad@reverbnation.com"]
   spec.description   = %q{Minitest Global Hooks for Setup/Teardown}
