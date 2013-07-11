@@ -1,6 +1,3 @@
-gem 'minitest'
-require "minitest/autorun"
-
 module Minitest
 
   class GlobalHooks < AbstractReporter
